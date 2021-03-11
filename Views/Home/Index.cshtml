@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1> Welcome to E-Nursery Web Application</h1>
+<hr />
+<br />
+<br />
+
+<div class="jumbotron">
+
+    <div>
+        <H3>User</H3>
+        <span>
+            @Html.ActionLink("Login", "UserLogin", "Account")
+        </span><span>
+        @Html.ActionLink("Register", "UserRegister", "Account")
+        </span>
+    </div>
+    <hr />
+    <br />
+    <br />
+    <div>
+        <H3>Nursery</H3>
+        <span>
+            @Html.ActionLink("Login", "NurseryLogin", "Account")
+        </span><span>
+            @Html.ActionLink("Register", "NurseryRegister", "Account")
+        </span>
+    </div>
+    <hr />
+    <br />
+    <br />
+    <div>
+        <H3>Admin</H3>
+        <span>
+            @Html.ActionLink("Login", "AdminLogin", "Account")
+        </span>
+    </div>
+
+</div>
+

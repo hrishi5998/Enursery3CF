@@ -1,0 +1,24 @@
+﻿@model Enursery3ccf.Models.User
+
+@{
+    ViewBag.Title = "UserAuthenticate";
+}
+
+<h2>User Authentication</h2>
+<hr />
+<br />
+<br />
+
+@if (Session["UserId"] != null)
+{
+    <h2>Authentication Successful</h2>
+    <br />
+    <h3>Hello @Session["Username"].ToString()</h3>
+    <h3>Your ID is @Session["UserId"].ToString() </h3>
+
+    <br /><br /><hr />
+    @Html.ActionLink("Go to User Login Page", "UserLogin", "Account")
+    <br />
+    @Html.ActionLink("Go to Homepage", "Index", "Home")
+    
+}

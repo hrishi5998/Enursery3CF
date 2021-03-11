@@ -1,0 +1,23 @@
+﻿@model Enursery3ccf.Models.Nursery
+
+@{
+    ViewBag.Title = "NurseryAuthentication";
+}
+
+<h2>Nursery Authentication</h2>
+<hr />
+<br />
+<br />
+
+@if (Session["NurseryId"] != null)
+{
+    <h2>Authentication Successful</h2>
+    <br />
+    <h3>Welcome @Session["NUsername"].ToString()</h3>
+    <h3>Your ID is @Session["NurseryId"].ToString() </h3>
+
+    <br /><br /><hr />
+    @Html.ActionLink("Go to Nursery Login Page", "NurseryLogin", "Account")
+    <br />
+    @Html.ActionLink("Go to Homepage", "Index", "Home")
+}
